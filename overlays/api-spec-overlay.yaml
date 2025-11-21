@@ -17,3 +17,21 @@ actions:
       additionalProperties: true
   - target: $["paths"]["/bulkjob/callback"]
     remove: true
+    # Removing Trading Mode related schemas and properties
+  - target: $["components"]["schemas"]["CampaignCreateWorkflowPrimaryInput"]["properties"]["tradingModeSettingsInput"]
+    remove: true
+  - target: $["components"]["schemas"]["CampaignCreateWorkflowTradingModeSettingsInput"]
+    remove: true
+  - target: $["components"]["schemas"]["CampaignUpdateWorkflowPrimaryInput"]["properties"]["tradingModeSettingsInput"]
+    remove: true
+  - target: $["components"]["schemas"]["CampaignUpdateWorkflowTradingModeSettingsInput"]
+    remove: true
+  - target: $["components"]["schemas"]["CampaignWorkflow"]["properties"]["tradingModeDetails"]
+    remove: true
+  - target: $["components"]["schemas"]["CampaignWorkflowTradingModeDetails"]
+    remove: true
+  - target: $["components"]["schemas"]["TradingMode"]
+    remove: true
+  - target: $["components"]["schemas"]["TradingModeCreateInput"]
+    remove: true
+  - target: $["components"]["schemas"]["TradingModeUpdateInput"]
